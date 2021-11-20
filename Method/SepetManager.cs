@@ -16,9 +16,11 @@ namespace Method
             Console.WriteLine("Tebrikler.Sepete eklendi! : " + urun.Adi);
         }
 
-        public void Ekle2(string urunAdi,string Aciklama ,double fiyat)
+        /*
+        public void Ekle2(string urunAdi,string Aciklama ,double fiyat, double stokAdedi)
         {
-            Console.WriteLine("Tebrikler.Sepete eklendi! : " + urunAdi);
+            Console.WriteLine("Tebrikler.Sepete eklendi! : " + urunAdi + Aciklama + fiyat + stokAdedi);
         }
+        */
     }
 }

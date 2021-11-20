@@ -42,13 +42,17 @@ namespace Method
             SepetManager sepetManeger = new SepetManager();
             sepetManeger.Ekle(urun1);
             sepetManeger.Ekle(urun2);
+            Console.WriteLine("-----------------------");
 
             /*
-            //bunlarbaşka sayfalar olsun diyelimki sen stok adedi diye bir özellik daha ekledin.Bütün sayfalara o özelliği yazmak zorundasın.
+            
+            //bunlar başka sayfalar olsun diyelimki sen stok adedi diye bir özellik daha ekledin.Bütün sayfalara o özelliği yazmak zorundasın.
             //Classta ise özellik olarak bir kere tanımlarsın her sayfada o gözükür.
-            sepetManeger.Ekle2("Armut", "Yeşil Armut", 12);
-            sepetManeger.Ekle2("Elma", "Yeşil Elma", 10);
-            sepetManeger.Ekle2("Karpuz", "Yeşil Karpuz", 20);
+            //SepetManager.cs ekle2 metodunda stokAdedi ekledin varsay aşağıdaki tüm sayfalara onu eklemek zorundasın.
+            //Bunun yerine Product.cs classa parametreyle eklediğin zaman özellik olarak her yere ekler.
+            sepetManeger.Ekle2("Armut", "Yeşil Armut", 12, 45);
+            sepetManeger.Ekle2("Elma", "Yeşil Elma", 10, 78);
+            sepetManeger.Ekle2("Karpuz", "Yeşil Karpuz", 20, 69);
 
            */
 
