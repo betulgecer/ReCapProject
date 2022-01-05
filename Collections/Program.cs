@@ -10,7 +10,7 @@ namespace Collections
         static void Main(string[] args)
         {
             /*
-            string[] isimler = new string[] { "Betül", "Sedat", "Ada", "Ozan" };
+            string[] isimler = new string[] { "Betül", "Serap", "Ada", "Ozan" };
             Console.WriteLine(isimler[0]);
             Console.WriteLine(isimler[1]);
             Console.WriteLine(isimler[2]);
@@ -29,7 +29,7 @@ namespace Collections
             */
 
             //koleksiyonlarda arrayler gibi değerleri kaybetmemizi engelleyecek bir altyapı var.
-            List<string> isimler2 = new List<string> {"Betül", "Sedat", "Ada", "Ozan"};
+            List<string> isimler2 = new List<string> {"Betül", "Serap", "Ada", "Ozan"};
             Console.WriteLine(isimler2[0]);
             Console.WriteLine(isimler2[1]);
             Console.WriteLine(isimler2[2]);

@@ -10,7 +10,7 @@ namespace OOP3
         {
             /*ICreditManager  personalFinanseCreditManager = new PersonalFinanseCreditManager();
             personalFinanseCreditManager.Calculate();
-            İnterfacelerde o interface implement eden classın referans numarsını tutabilir.
+            İnterfacelerde o interface implement eden classın referans numarasını tutabilir.
             */
 
             PersonalFinanseCreditManager personalFinanseCreditManager = new PersonalFinanseCreditManager();

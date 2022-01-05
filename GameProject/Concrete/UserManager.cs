@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GameProject.Concrete
 {
-    class UserManager : IUserService
+    public class UserManager : IUserService
     {
         IUserValidationService _userValidationService;
 

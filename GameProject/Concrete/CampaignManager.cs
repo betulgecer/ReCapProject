@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameProject.Concrete
 {
-    class CampaignManager
+    public class CampaignManager : ICampaignService
     {
         public void Add(Campaign campaign)
         {

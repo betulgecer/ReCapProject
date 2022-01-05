@@ -1,12 +1,16 @@
-﻿using Entities.Concrete;
+﻿using Core.DataAccess;
+using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IProductDal
+    public interface IProductDal:IEntityRepository<Product>
     {
+        //ıproductdal sen bir ıentityrepositorysin çalışma tipin product.Sen ıentityrepositoryi product için yapılandırdın.
+        /*
         //e-ticaret sisteminde ürünlerin listelendiğini düşün
         //data accesse ürün ekliycez ürün listeliycez ürün nerede entitieste.başka bir katmanı kullanmak istiyorsan referans verirsin.
         List<Product> GetAll();
@@ -17,6 +21,9 @@ namespace DataAccess.Abstract
 
         //ürünleri kategoriye göre filtrele
         List<Product> GetAllByCategory(int categoryId);
+        */
+
+        List<ProductDetailDto> GetProductDetails();
 
     }
 }

@@ -6,8 +6,7 @@ namespace ClassIntro
     {
         static void Main(string[] args)
         {
-
-            Kurs kurs1 = new Kurs();
+            Kurs kurs1 = new Kurs();   //Bir class değişkeni bu şekilde tanımlanır
             kurs1.KursAdi = "C#";
             kurs1.Egitmen = "Engin Demiroğ";
             kurs1.IzlenmeOrani = 68;
@@ -27,12 +26,11 @@ namespace ClassIntro
             kurs4.Egitmen = "Murat Kurtboğan";
             kurs4.IzlenmeOrani = 100;
 
-
             //Console.WriteLine(kurs1.KursAdi + " : " + kurs1.Egitmen);
 
             Kurs[] kurslar = new Kurs[] { kurs1, kurs2, kurs3, kurs4 };
 
-            foreach (var kurs in kurslar)
+            foreach (Kurs kurs in kurslar)
             {
                 Console.WriteLine(kurs.KursAdi + " : " + kurs.Egitmen + " : " + kurs.IzlenmeOrani);
             }

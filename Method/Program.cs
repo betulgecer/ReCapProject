@@ -39,9 +39,9 @@ namespace Method
             //instance - örnek
             //class oluştururken onun bir örneğini oluşturur gibi çağırıyoruz
             //encapsulation -- kapsülleme özellikleri ayrı ayrı yazmak yerine kapsülleme. classta bir özellik tanımlayıp diğer sayfalarda özelliğin çağırması
-            SepetManager sepetManeger = new SepetManager();
-            sepetManeger.Ekle(urun1);
-            sepetManeger.Ekle(urun2);
+            SepetManager sepetManager = new SepetManager();
+            sepetManager.Ekle(urun1);
+            sepetManager.Ekle(urun2);
             Console.WriteLine("-----------------------");
 
             /*

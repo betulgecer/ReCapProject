@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GameProject.Concrete
 {
-    class SalesManager : ISalesService
+    public class SalesManager : ISalesService
     {
         public void CampaignSale(User user, Game game, Campaign campaign)
         {
@@ -32,6 +32,5 @@ namespace GameProject.Concrete
         {
             Console.WriteLine("Satış silindi!");
         }
-    
     }
 }

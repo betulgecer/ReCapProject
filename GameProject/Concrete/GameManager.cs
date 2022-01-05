@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameProject.Concrete
 {
-    class GameManager
+    public class GameManager : IGameService
     {
         public void Add(Game game)
         {

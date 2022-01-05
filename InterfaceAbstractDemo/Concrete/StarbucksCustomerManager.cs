@@ -6,9 +6,9 @@ using System.Text;
 
 namespace InterfaceAbstractDemo.Concrete
 {
-    public class StarbucksCustomerManager:Abstract.BaseCustomerManager
+    public class StarbucksCustomerManager : Abstract.BaseCustomerManager
     {
-        private ICustomerCheckService _customerCheckService;
+        private ICustomerCheckService  _customerCheckService;
 
         public StarbucksCustomerManager(ICustomerCheckService customerCheckService)
         {
@@ -21,7 +21,7 @@ namespace InterfaceAbstractDemo.Concrete
                 {
                 base.Save(customer);
                 }
-                 //CheckIfRealPerson(customer); //mernis doğrulaması bu kişi var mı sistemde yok mu?Senaryo ereği kullanıcı istedi
+              //CheckIfRealPerson(customer); //mernis doğrulaması bu kişi var mı sistemde yok mu? Senaryo gereği kullanıcı istedi
 
             else
             {

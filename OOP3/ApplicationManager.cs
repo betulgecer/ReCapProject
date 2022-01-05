@@ -27,11 +27,11 @@ namespace OOP3
             */
 
             // ben buraya taşıt kredisi gönderirsem belllekteki taşıt kredisinin hesaplaması çalışır.
-            //burada tek bir kredi var pnu çağırıyor onun hesaplamasını çağırtıyor.Aşağıda ise bir liste var herbirini tek tek dolaş hesapla diyor.
+            //burada tek bir kredi var onu çağırıyor onun hesaplamasını çağırtıyor.Aşağıda ise bir liste var herbirini tek tek dolaş hesapla diyor.
         }
 
         //Burada da ön bilgilendirme istiyorum birden fazla kredinin hesabını yapıcam.
-        // Aynı veri türünde belirli sayıda o sayıda belirsizse bir veri grubu oluşturmak ,ç,n koleksiyonlar(List<istediğin veri tipi>)kullanılır. krediler parametre
+        // Aynı veri türünde belirli sayıda ve o sayıda belirsizse bir veri grubu oluşturmak için koleksiyonlar(List<istediğin veri tipi>)kullanılır. krediler parametre
         public void KrediOnBilgilendirmesiYap(List<ICreditManager> credits)
         {
             //listedeki herbir kredinin hesabını yap,listeyi gezicek ya tüm krediler foreach kullandık
@@ -41,6 +41,7 @@ namespace OOP3
 
             }
         }
+
 
     }
 }

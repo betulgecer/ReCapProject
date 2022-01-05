@@ -17,10 +17,20 @@ namespace OOP1
 
             Product product2 = new Product { Id = 2, CategoryId = 5, UnitsInStock = 5, ProductName = "Kalem", UnitPrice= 35 };
 
+            Product[] products = new Product[] { product1, product2 };
+
+            foreach (Product product in products)
+            {
+                Console.WriteLine(product.UnitPrice);
+            }
+
             //PascalCase  //camelCase
             //case sensitive -- küçük büyük harf duyarlı
 
             ProductManager productManager = new ProductManager();
+            productManager.Update(product1);
+            productManager.Add(product2);
+
 
 
             /*
@@ -43,7 +53,7 @@ namespace OOP1
             //diyelimki topla fonksiyonu çalıştıktan sonra ben çıkan sonucu bi de2 ile çarpmak istiyorum diyelim
             //void te olmaz.Çünkü gitti yaptı bitti işi bu topla fonksiyonu için sayi1,sayi2 diye int tipinde veri belirledik.
             //burda toplamaSonucu diye değişken tanımlayıp topla fonksiyonumuzu burada kullandık.toplamaSonucu değişkenini kodda daha sonra kullanıp 2 ile çarptık.
-            //returnde devam çzelliği vardır.Topla fonksşyonunu 2.kez kullanılır hale getirdik.
+            //returnde devam özelliği vardır.Topla fonksşyonunu 2.kez kullanılır hale getirdik.
             int toplamaSonucu = productManager.Topla(3, 6);
             Console.WriteLine(toplamaSonucu*2);
             //Console.WriteLine(productManager.Topla(3, 6)* 2);
