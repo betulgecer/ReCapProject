@@ -10,8 +10,8 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            CarDetailDtoTest();
-            //CarTest();
+            //CarDetailDtoTest();
+            CarTest();
             //BrandTest();
             //ColorTest();
 
@@ -28,17 +28,25 @@ namespace Console
             System.Console.WriteLine("\n");
 
             System.Console.WriteLine("-------GetById()-------");
-            foreach (var co in colorManager.GetById(3))
-            {
-                System.Console.WriteLine(co.ColorId);
-            }
+            var result = colorManager.GetById(2);
+            System.Console.WriteLine(result.Data.ColorName);
             System.Console.WriteLine("\n");
 
+
             System.Console.WriteLine("-------GetAll()-------");
-            foreach (var b in colorManager.GetAll())
+            var result1 = colorManager.GetAll();
+            if(result1.Success==true)
             {
-                System.Console.WriteLine(b.ColorName);
+                foreach (var c in result1.Data)
+                {
+                    System.Console.WriteLine(c.ColorName + " renkli araç");
+                }
             }
+            else
+            {
+                System.Console.WriteLine(result1.Message);
+            }
+            
         }
 
         private static void BrandTest()
@@ -52,16 +60,22 @@ namespace Console
             System.Console.WriteLine("\n");
 
             System.Console.WriteLine("-------GetById()-------");
-            foreach (var b in brandManager.GetById(3))
-            {
-                System.Console.WriteLine(b.BrandId);
-            }
+            var result = brandManager.GetById(2);
+            System.Console.WriteLine(result.Data.BrandName);
             System.Console.WriteLine("\n");
 
             System.Console.WriteLine("-------GetAll()-------");
-            foreach (var b in brandManager.GetAll())
+            var result1 = brandManager.GetAll();
+            if(result1.Success == true)
             {
-                System.Console.WriteLine(b.BrandName);
+                foreach (var b in result1.Data)
+                {
+                    System.Console.WriteLine(b.BrandName + " markalı araç");
+                }
+            }
+            else
+            {
+                System.Console.WriteLine(result.Message);
             }
         }
 
@@ -77,40 +91,79 @@ namespace Console
 
 
             System.Console.WriteLine("-------GetCarsByBrandId()-------");
-            foreach (var c in carManager.GetCarsByBrandId(2))
+            var result = carManager.GetCarsByBrandId(2);
+            if (result.Success == true)
             {
-                System.Console.WriteLine(c.Descriptions);
+                foreach (var c in result.Data)
+                {
+                    System.Console.WriteLine(c.Descriptions);
+                }
+            }
+            else
+            {
+                System.Console.WriteLine(result.Message);
             }
             System.Console.WriteLine("\n");
 
             System.Console.WriteLine("-------GetCarsByColorId()-------");
-            foreach (var c in carManager.GetCarsByColorId(4))
+            var result1 = carManager.GetCarsByColorId(4);
+            if(result1.Success==true)
             {
-                System.Console.WriteLine(c.ModelYear);
+                foreach (var c in result1.Data)
+                {
+                    System.Console.WriteLine(c.ModelYear);
+                }
+            }
+            else
+            {
+                System.Console.WriteLine(result1.Message);
             }
             System.Console.WriteLine("\n");
 
+            System.Console.WriteLine("-------GetById()-------");
+            var result2 = carManager.GetById(2);
+            System.Console.WriteLine(result2.Data.Descriptions);
+            System.Console.WriteLine("\n");
+
             System.Console.WriteLine("-------GetAll()-------");
-            foreach (var c in carManager.GetAll())
+            var result3 = carManager.GetAll();
+            if(result3.Success==true)
             {
-                System.Console.WriteLine(c.BrandId + " " + "markalı araç" + " " + c.ColorId + " " + "renginde" + " "
-                                         + c.ModelYear + " " + "modelinde" + " " + c.DailyPrice + " " + "fiyata sahip" + " "
-                                         + c.Descriptions + "tır.");
+                foreach (var c in result3.Data)
+                {
+                    System.Console.WriteLine(c.BrandId + " " + "markalı araç" + " " + c.ColorId + " " + "renginde" + " "
+                                             + c.ModelYear + " " + "modelinde" + " " + c.DailyPrice + " " + "fiyata sahip" + " " + c.Descriptions + "tır.");
+                }
             }
+            else
+            {
+                System.Console.WriteLine(result3.Message);
+            }
+            
         }
 
         private static void CarDetailDtoTest()
         {
             System.Console.WriteLine("\n--------CAR DETAIL-------");
             CarManager carmanager = new CarManager(new EfCarDal());
-            foreach (var car in carmanager.GetCarDetails())
+            var result = carmanager.GetCarDetails();
+            if(result.Success==true)
             {
-                System.Console.WriteLine("Car Name : " + car.CarName + "\n" +
-                                        "Brand Name : " + car.BrandName + "\n" +
-                                        "Color Name : " + car.ColorName + "\n" +
-                                        "Daily Price : " + car.DailyPrice + "\n");
-                System.Console.WriteLine("Şu kadar araç listelendi : {carmanager.GetCarDetails().Count}");
+                foreach (var car in result.Data)
+                {
+                    System.Console.WriteLine("Car Name : " + car.CarName + "\n" +
+                                            "Brand Name : " + car.BrandName + "\n" +
+                                            "Color Name : " + car.ColorName + "\n" +
+                                            "Daily Price : " + car.DailyPrice + "\n");
+                }
             }
+            else
+            {
+                System.Console.WriteLine(result.Message);
+            }
+
+            System.Console.WriteLine("Şu kadar araç listelendi : " + result.Data.Count);
+
         }
 
     }
